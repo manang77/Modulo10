@@ -31,6 +31,7 @@ const myWordList = [
   "Argentina",
   "Poland",
   "China",
+  "Alemania",
   "France",
   "Philippines",
   "Armenia",
@@ -109,9 +110,8 @@ console.log(tail(myList));
 // primer elemento ha sido colocado en la última posición
 
 const swapFirstToLast = myArray => {
-  const [firstElement, ...swappedList] = myArray;
-  swappedList.push(firstElement);
-  return swappedList;
+  const [firstElement, ...tailList] = myArray;
+  return [...tailList, firstElement];
 };
 
 console.log("**************** FUNCION: swapFirstToLast **********************");
@@ -136,8 +136,7 @@ console.log(excludeId(obj2));
 // Implementa una función llamada wordsStartingWithA tal que, dado un array de palabras como entrada, devuelva otro array
 // filtrado con aquellas palabras que empiecen por a.
 
-const wordsStartingWithA = myArray =>
-  myArray.filter(elem => elem.toUpperCase().startsWith("A"));
+const wordsStartingWithA = myArray => myArray.filter(elem => elem.toUpperCase()[0] === "A");
 
 console.log("**************** FUNCION: wordsStartingWithA *******************");
 console.log(myWordList);
