@@ -195,7 +195,7 @@ console.log(swapFirstSecond(myNumberArray));
 // Implementa una función longest tal que admita multiples strings como argumento de entrada así como un carácter
 // cualquiera, y devuelva un booleano indicando si todos los strings comienzan por dicho carácter o no.
 const longest = (headingChar, ...list) =>
-  list.every(element => element.toUpperCase().startsWith(headingChar.toUpperCase()));
+  list.every(element => element.toUpperCase()[0] === headingChar.toUpperCase());
 
 console.log("**************** FUNCION: longest **********************");
 console.log("E", "España", "Estonia", "eslovaquia", "Ecuador");
